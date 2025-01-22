@@ -1,8 +1,14 @@
 import { useCounter } from "../hooks/useCounter";
 
 const Counter = () => {
-  const { count, handleDecrement, handleIncrement, handleResetCounter } =
-    useCounter();
+  const {
+    count,
+    isLike,
+    handleDecrement,
+    handleIncrement,
+    handleResetCounter,
+    handleLikeToggle,
+  } = useCounter();
 
   return (
     <div
@@ -15,6 +21,12 @@ const Counter = () => {
       <p>{count}</p>
       <button onClick={handleIncrement}>Tambah</button>
       <button onClick={handleResetCounter}>Reset</button>
+      <button
+        onClick={handleLikeToggle}
+        style={{ backgroundColor: isLike ? "red" : "#1a1a1a" }}
+      >
+        {isLike ? "Unlike" : "Like"}
+      </button>
     </div>
   );
 };
