@@ -1,4 +1,5 @@
 import "./App.css";
+import Counter from "./components/Counter";
 import ProfileCard from "./components/ProfileCard";
 
 type OnePieceChar = {
@@ -32,7 +33,8 @@ const characters: OnePieceChar[] = [
 function App() {
   return (
     <>
-      <div style={{ gap: "8px", display: "flex", flexDirection: "row" }}>
+      <Counter />
+      {/* <div style={{ gap: "8px", display: "flex", flexDirection: "row" }}>
         {characters.map((character) => (
           <ProfileCard
             name={character.name}
@@ -41,7 +43,7 @@ function App() {
             key={character.id}
           />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }
