@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ProductListPage from "./pages/ProductListPage";
+import FormPage from "./pages/FormPage";
 
 // type OnePieceChar = {
 //   name: string;
@@ -56,6 +57,7 @@ function App() {
         <Route path="/term" element={<TermPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:slug" element={<ProductDetailPage />} />
+        <Route path="/form" element={<FormPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
